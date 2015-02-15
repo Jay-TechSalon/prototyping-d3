@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="http://d3js.org/d3.v3.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+  <meta charset=utf-8 />
+  <title>d3 js beginning</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+  <script src="js/main.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+
+  <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+
+</head>
+
+<body>
+  <!-- Add 5 divs here.
+    If you want, say something about how good you are inside the divs .
+    -->
+  <section class="objects">
+    <svg width="720" height="400">
+      <circle id="circle-1" cx="500" cy="195" r="20"></circle>
+      <circle id="circle-2" cx="540" cy="225" r="40"></circle>
+      <circle id="circle-3" cx="300" cy="220" r="22"></circle>
+      <circle id="circle-4" cx="120" cy="100" r="33"></circle>
+      <circle id="circle-5" cx="240" cy="300" r="60"></circle>
+      <circle id="circle-6" cx="400" cy="65" r="10"></circle>
+    </svg>
+  </section>
+  <!-- end of the cirlces -->
+  <section class="control-panel">
+    <div class="color-theme-container">
+      <h1 class="color-options">Circle Prototype V1</h1>
+      <button id="addCircles">Add Circles</button>
+      <button id="randomizeColor">Randomize Color</button>
+    </div>
+    <div class="slider-container">
+      <p>
+        <label for="amount">Opacity Slider ( 1=100% - 3=33% ) :</label>
+        <input type="text" id="amount" onchange="toggleCircleColor()" readonly>
+      </p>
+      <div id="slider"></div>
+    </div>
+    <div class="list-container">
+      <div class="list-of-removed-circles">
+        <p>*Removed Circles</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+body {
+  width: 90%;
+  padding: 10px;
+  margin: 20px auto;
+  background-color: #E0F2F7;
+}
+p {
+  color: #666;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 16px;
+  font-family: "Futura";
+}
+input {
+  background: buttonface;
+  width: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Futura";
+  border: 1px solid silver;
+  color: black;
+  text-align: right;
+}
+button {
+  color: black;
+  font-family: "Futura";
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+label {
+  color: black;
+  font-family: "Futura";
+}
+h1 {
+  color: black;
+  font-family: "Futura";
+  font-size: 20px;
+  -webkit-margin-after: 0.1em;
+}
+section circle {
+  cursor: pointer;
+}
+.color-theme-container {
+  width: 50%;
+  float: left;
+}
+.slider-container {
+  padding-top: 1em;
+  width: 50%;
+  float: left;
+}
+.list-container {
+  float: left;
+}
+.ui-widget-content {
+  background: buttonface;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  background: #f6931f;
+  cursor: pointer;
+}
+:focus {
+  outline: #f6931f;
+}
