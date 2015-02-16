@@ -29,15 +29,12 @@ $('document').ready(function() {
     toggleCircleColor();
   });
 
-  // event for clicking circles that makes them transparent and fires of the onComplete function which then fades them back to 100% opacity
-  $("circle[id^=circle-]").dblclick(function() {
-    $(this).fadeOut("slow", onComplete);
+  // this adds the so-called deleted circle to the ul list and uses a li to do so
+  $("circle").dblclick(function () {
+    var theDeleted = $(this).attr("name");
+    $(this).fadeOut("slow");
+    $("<li>-"+ theDeleted +"</li>").appendTo("ul");
   });
-
-  // this brings back the color after the circles are clicked in the page
-  function onComplete() {
-    $("<li>"+ this +"</li>").appendTo("ul");
-  }
 
   // on-click events for all the circles, this reveals a tooltip for the circle's unique id - make this into a switch when time permits
   $('#circle-1').click(function() {
@@ -45,7 +42,7 @@ $('document').ready(function() {
       items: "#circle-1",
       content: "-1-"
     });
-    $('#circle-2').tooltip("open");
+    $('#circle-1').tooltip("open");
   });
 
   $('#circle-2').click(function() {
