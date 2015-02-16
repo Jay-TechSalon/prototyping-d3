@@ -1,25 +1,10 @@
 body {
   width: 90%;
-  padding: 10px;
-  margin: 20px auto;
+  min-width: 700px;
+  max-width: 800px;
+  padding: 0 25px;
+  margin: 0 auto;
   background-color: #E0F2F7;
-}
-p {
-  color: #666;
-  text-align: center;
-  padding-top: 10px;
-  font-size: 16px;
-  font-family: "Futura";
-}
-input {
-  background: buttonface;
-  width: 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  font-family: "Futura";
-  border: 1px solid silver;
-  color: black;
-  text-align: right;
 }
 button {
   color: black;
@@ -31,6 +16,22 @@ button {
   margin-bottom: -5px;
   cursor: pointer;
 }
+h1 {
+  color: black;
+  font-family: "Futura";
+  font-size: 20px;
+  -webkit-margin-after: 0.1em;
+}
+input {
+  background: buttonface;
+  width: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Futura";
+  border: 1px solid silver;
+  color: black;
+  text-align: right;
+}
 label {
   color: black;
   font-family: "Futura";
@@ -38,16 +39,23 @@ label {
 li {
   display: inline;
   padding-right: 5px;
+  font-size: 25px;
+  vertical-align: baseline;
+  word-wrap: break-word;
+}
+li span {
+  font-size: 14px;
   color: #333;
   font-family: "Futura";
-  font-size: 14px;
-  text-align: left;
+  font-size: 12px;
+  padding-left: -10px;
 }
-h1 {
-  color: black;
+p {
+  color: #666;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 16px;
   font-family: "Futura";
-  font-size: 20px;
-  -webkit-margin-after: 0.1em;
 }
 section circle {
   cursor: pointer;
@@ -56,20 +64,28 @@ span {
   color: black;
   font-weight: bolder;
 }
+.color-theme-container {
+  width: 50%;
+  float: left;
+}
 .directions {
   width: 65%;
   font-size: 12px;
   text-align: left;
 }
-.color-theme-container {
-  width: 50%;
-  float: left;
+:focus {
+  outline: #f6931f;
 }
-.slider-container {
-  padding-top: 1em;
-  width: 45%;
-  float: left;
-  margin-left: 10px;
+.footnote {
+  clear: both;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  right: 45%;
+  color: #A4A4A4;
+}
+.footnote img {
+  width:12%;
 }
 .list-container {
   float: left;
@@ -79,13 +95,20 @@ span {
   text-align: left;
   margin-left: 20px;
 }
+.objects svg {
+  margin: 0 auto;
+  padding: 20px;
+}
+.slider-container {
+  padding-top: 1em;
+  width: 45%;
+  float: left;
+  margin-left: 18px;
+}
 .ui-widget-content {
   background: buttonface;
 }
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
   background: #f6931f;
   cursor: pointer;
-}
-:focus {
-  outline: #f6931f;
 }

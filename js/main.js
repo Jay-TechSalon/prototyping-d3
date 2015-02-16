@@ -30,13 +30,15 @@ $('document').ready(function() {
   });
 
   // this adds the so-called deleted circle to the ul list and uses a li to do so
-  $("circle").dblclick(function () {
+  $("circle").dblclick(function() {
     var theDeleted = $(this).attr("name");
+    var theColor = $(this).css("fill");
+    console.log(theColor);
     $(this).fadeOut("slow");
-    $("<li>-"+ theDeleted +"</li>").appendTo("ul");
+    $("<li>&bull;<span>" + theDeleted + "</span></li>").appendTo("ul").css("color", "" + theColor + "");
   });
 
-  // on-click events for all the circles, this reveals a tooltip for the circle's unique id - make this into a switch when time permits
+  // on-click events for all the circles, this reveals a tooltip for the circle's unique id
   $('#circle-1').click(function() {
     $('#circle-1').tooltip({
       items: "#circle-1",
@@ -85,10 +87,6 @@ $('document').ready(function() {
     $('#circle-6').tooltip("open");
   });
 
-  // set variables for the circles
-
-
-
   // slider from jQuery UI kit
   $(function() {
     $("#slider").slider({
@@ -105,14 +103,13 @@ $('document').ready(function() {
     });
     $("#amount").val($("#slider").slider("value"));
   });
-
+  // slider amount update function
   function sliderUpdated() {
     var amountVal = $("#slider").slider("option", "value");
 
     d3.selectAll("circle")
       .transition()
       .style("opacity", 1 / amountVal);
-    // console.log("this works " + amountVal + "");
   }
 
 }); //end of document ready
