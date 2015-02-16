@@ -26,14 +26,20 @@ button {
   font-family: "Futura";
   border-radius: 5px;
   padding: 10px;
-  margin-right: 10px;
+  margin-right: 5px;
   margin-top: 20px;
-  margin-bottom: 50px;
+  margin-bottom: -5px;
   cursor: pointer;
 }
 label {
   color: black;
   font-family: "Futura";
+}
+li {
+  color: #333;
+  font-family: "Futura";
+  font-size: 14px;
+  text-align: left;
 }
 h1 {
   color: black;
@@ -44,17 +50,31 @@ h1 {
 section circle {
   cursor: pointer;
 }
+span {
+  color: black;
+  font-weight: bolder;
+}
+.directions {
+  width: 65%;
+  font-size: 12px;
+  text-align: left;
+}
 .color-theme-container {
   width: 50%;
   float: left;
 }
 .slider-container {
   padding-top: 1em;
-  width: 50%;
+  width: 45%;
   float: left;
+  margin-left: 10px;
 }
 .list-container {
   float: left;
+}
+.list-of-removed-circles p {
+  margin-top: 7px;
+  text-align: left;
 }
 .ui-widget-content {
   background: buttonface;

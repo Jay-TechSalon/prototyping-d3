@@ -17,9 +17,7 @@
 </head>
 
 <body>
-  <!-- Add 5 divs here.
-    If you want, say something about how good you are inside the divs .
-    -->
+
   <section class="objects">
     <svg width="720" height="400">
       <circle id="circle-1" cx="500" cy="195" r="20"></circle>
@@ -34,19 +32,23 @@
   <section class="control-panel">
     <div class="color-theme-container">
       <h1 class="color-options">Circle Prototype V1</h1>
-      <button id="addCircles">Add Circles</button>
+      <button id="addCircles">Start</button>
       <button id="randomizeColor">Randomize Color</button>
+      <button class="remove-circles">*Delete Mode</button>
+      <p class="directions">*After clicking <span>delete mode, double click</span> the circles to make them disappear!!</p>
     </div>
     <div class="slider-container">
       <p>
-        <label for="amount">Opacity Slider ( 1=100% - 3=33% ) :</label>
-        <input type="text" id="amount" onchange="toggleCircleColor()" readonly>
+        <label for="amount">Opacity Slider ( 1=100% to 3=33% ) :</label>
+        <input type="text" id="amount" readonly>
       </p>
       <div id="slider"></div>
     </div>
     <div class="list-container">
       <div class="list-of-removed-circles">
-        <p>*Removed Circles</p>
+        <p>Deleted Circles</p>
+        <ul>
+        </ul>
       </div>
     </div>
   </section>

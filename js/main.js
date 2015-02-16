@@ -1,10 +1,5 @@
 $('document').ready(function() {
-  // body...
-  // var circle = d3.selectAll("circle");
-  // var sliderAmount = $("#amount").mousemove(function() {
-  //   $("#text").text($("#amount").val());
-  // });
-  //
+
   // on page load this hides the cirlces and keeps the div from starting in the collapsed position
   $('circle').fadeOut(0);
   // this allows the circles to animate by fading onto the screen with a random color on each circle
@@ -35,11 +30,16 @@ $('document').ready(function() {
   });
 
   // event for clicking circles that makes them transparent and fires of the onComplete function which then fades them back to 100% opacity
-  $('circle').click(function() {
-    $(this).fadeTo("slow", 0.3, onComplete);
+  $("circle[id^=circle-]").dblclick(function() {
+    $(this).fadeOut("slow", onComplete);
   });
 
-  // on-click events for all the circles, this reveals a tooltip for the circle's unique id
+  // this brings back the color after the circles are clicked in the page
+  function onComplete() {
+    $("<li>"+ this +"</li>").appendTo("ul");
+  }
+
+  // on-click events for all the circles, this reveals a tooltip for the circle's unique id - make this into a switch when time permits
   $('#circle-1').click(function() {
     $('#circle-1').tooltip({
       items: "#circle-1",
@@ -88,6 +88,10 @@ $('document').ready(function() {
     $('#circle-6').tooltip("open");
   });
 
+  // set variables for the circles
+
+
+
   // slider from jQuery UI kit
   $(function() {
     $("#slider").slider({
@@ -105,19 +109,13 @@ $('document').ready(function() {
     $("#amount").val($("#slider").slider("value"));
   });
 
-  // this brings back the color after the circles are clicked in the page
-  function onComplete() {
-    $(this).fadeTo("fast", 1.0);
-  }
-
   function sliderUpdated() {
     var amountVal = $("#slider").slider("option", "value");
-    // $('circle').fadeTo("slow", Math.random * amountVal);
 
     d3.selectAll("circle")
       .transition()
       .style("opacity", 1 / amountVal);
-    // console.log("this works" + amountVal + "");
+    // console.log("this works " + amountVal + "");
   }
 
 }); //end of document ready
